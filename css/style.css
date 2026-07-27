@@ -45,10 +45,35 @@ body.light-mode {
     --color-white-06:  rgba(0,0,0,0.06);
 }
 
-body.light-mode .nav-logo img,
 body.light-mode .footer-logo img,
 body.light-mode .loader-bg-logo {
     filter: invert(1);
+}
+
+/* Ensure Logo stays clear & un-inverted */
+body.light-mode .nav-logo img {
+    filter: none !important;
+}
+
+/* Ensure text on solid dark components (like hero overlays, dark badges, buttons) remains legible */
+body.light-mode .hero-headline,
+body.light-mode .hero-eyebrow,
+body.light-mode .hero-scroll-cue,
+body.light-mode .banner-title,
+body.light-mode .banner-eyebrow,
+body.light-mode .banner-desc,
+body.light-mode .product-badge,
+body.light-mode .intention-badge,
+body.light-mode .welcome-offer-title,
+body.light-mode .welcome-offer-btn,
+body.light-mode .btn-white,
+body.light-mode .btn-outline {
+    color: #ffffff !important;
+}
+
+body.light-mode .btn-white {
+    background-color: #ffffff !important;
+    color: #000000 !important;
 }
 
 /* ==========================================================================
@@ -2092,13 +2117,53 @@ ul { list-style: none; }
     margin-top: 10px;
     font-weight: 400;
 }
-.intention-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 28px;
+.intention-marquee-container {
+    width: 100%;
+    overflow: hidden;
     margin-top: 48px;
+    position: relative;
 }
+.intention-marquee-container::before,
+.intention-marquee-container::after {
+    content: '';
+    position: absolute;
+    top: 0; bottom: 0;
+    width: 80px;
+    z-index: 5;
+    pointer-events: none;
+}
+.intention-marquee-container::before {
+    left: 0;
+    background: linear-gradient(to right, var(--color-surface), transparent);
+}
+.intention-marquee-container::after {
+    right: 0;
+    background: linear-gradient(to left, var(--color-surface), transparent);
+}
+
+.intention-marquee-track {
+    display: flex;
+    gap: 28px;
+    width: max-content;
+    animation: marqueeLeftToRight 30s linear infinite;
+}
+
+.intention-marquee-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes marqueeLeftToRight {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
 .intention-card {
+    width: 320px;
+    flex-shrink: 0;
     background: var(--color-surface-2);
     border: 1px solid var(--color-white-06);
     border-radius: 4px;
