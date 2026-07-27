@@ -16,6 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
     fetchAndRenderProducts();
     initContactForm();
     initProductDetailPage();
+    initFaqAccordion();
+    initWelcomeOfferModal();
 });
 
 /* ==========================================================================
@@ -822,3 +824,60 @@ async function initProductDetailPage() {
         layout.innerHTML = `<p style="grid-column:1/-1;color:var(--color-white-40);text-align:center;padding:80px 0;font-family:var(--font-body);">Could not load product. <a href="collections.html" style="color:var(--color-red)">Back to Shop</a></p>`;
     }
 }
+
+/* ==========================================================================
+   FAQ ACCORDION TOGGLE
+   ========================================================================== */
+function initFaqAccordion() {
+    const items = document.querySelectorAll('.faq-item');
+    if (!items.length) return;
+
+    items.forEach(item => {
+        const trigger = item.querySelector('.faq-trigger');
+        trigger?.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+            items.forEach(i => i.classList.remove('active'));
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        });
+    });
+}
+
+/* ==========================================================================
+   WELCOME OFFER POPUP MODAL
+   ========================================================================== */
+function initWelcomeOfferModal() {
+    const modal = document.getElementById('welcome-offer-overlay');
+    const closeBtn = document.getElementById('welcome-offer-close');
+    const form = document.getElementById('welcome-offer-form');
+    if (!modal) return;
+
+    // Check if dismissed before
+    if (sessionStorage.getItem('rukus_welcome_dismissed')) return;
+
+    // Show after 3.5 seconds
+    setTimeout(() => {
+        modal.classList.add('active');
+    }, 3500);
+
+    const closeModal = () => {
+        modal.classList.remove('active');
+        sessionStorage.setItem('rukus_welcome_dismissed', 'true');
+    };
+
+    closeBtn?.addEventListener('click', closeModal);
+    modal.addEventListener('click', e => {
+        if (e.target === modal) closeModal();
+    });
+
+    form?.addEventListener('submit', e => {
+        e.preventDefault();
+        const email = document.getElementById('welcome-offer-email')?.value;
+        if (email) {
+            closeModal();
+            showToast('20% DISCOUNT UNLOCKED!', 'Use promo code DISCIPLINE20 at checkout.', 'fa-solid fa-gift');
+        }
+    });
+}
+

@@ -2054,3 +2054,581 @@ ul { list-style: none; }
 }
 .btn.btn-primary:hover { background: var(--color-red-dark); }
 .text-center { text-align: center; }
+
+/* ==========================================================================
+   ENHANCED LOGO, BRANDNAME & NAV TYPOGRAPHY
+   ========================================================================== */
+.nav-logo img {
+    height: 48px !important;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+.nav-logo:hover img {
+    transform: scale(1.05);
+}
+.nav-link {
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.2em !important;
+}
+
+#loading-screen .loader-wordmark {
+    font-size: 32px !important;
+    font-weight: 900 !important;
+    letter-spacing: 0.6em !important;
+}
+
+/* ==========================================================================
+   CARRIED WITH INTENTION SECTION
+   ========================================================================== */
+.intention-section {
+    background-color: var(--color-surface);
+    border-top: 1px solid var(--color-white-10);
+    border-bottom: 1px solid var(--color-white-10);
+}
+.section-subtext {
+    color: var(--color-white-50);
+    font-size: 14px;
+    margin-top: 10px;
+    font-weight: 400;
+}
+.intention-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+    margin-top: 48px;
+}
+.intention-card {
+    background: var(--color-surface-2);
+    border: 1px solid var(--color-white-06);
+    border-radius: 4px;
+    overflow: hidden;
+    transition: transform 0.4s var(--ease-out-expo), border-color 0.4s ease;
+}
+.intention-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--color-red);
+}
+.intention-img-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/5;
+    background: #0d0d0d;
+    overflow: hidden;
+}
+.intention-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s var(--ease-out-expo);
+}
+.intention-card:hover .intention-img {
+    transform: scale(1.08);
+}
+.intention-badge {
+    position: absolute;
+    top: 14px; left: 14px;
+    background: var(--color-red);
+    color: #fff;
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 0.15em;
+    padding: 4px 10px;
+    border-radius: 2px;
+    text-transform: uppercase;
+}
+.intention-quick-add {
+    position: absolute;
+    bottom: 14px; left: 14px; right: 14px;
+    background: rgba(10,10,10,0.9);
+    backdrop-filter: blur(8px);
+    color: #fff;
+    border: 1px solid var(--color-white-20);
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    padding: 12px;
+    text-align: center;
+    border-radius: 2px;
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.3s ease, transform 0.3s var(--ease-out-expo), background 0.2s ease;
+}
+.intention-card:hover .intention-quick-add {
+    opacity: 1;
+    transform: translateY(0);
+}
+.intention-quick-add:hover {
+    background: var(--color-red);
+    border-color: var(--color-red);
+}
+.intention-info {
+    padding: 20px;
+}
+.intention-name {
+    font-family: var(--font-display);
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    color: var(--color-white);
+    margin-bottom: 6px;
+}
+.intention-price {
+    font-size: 14px;
+    color: var(--color-cream);
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   FAQ ACCORDION SECTION
+   ========================================================================== */
+.faq-section {
+    background: var(--color-bg);
+}
+.faq-accordion {
+    max-width: 900px;
+    margin: 48px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.faq-item {
+    background: var(--color-surface);
+    border: 1px solid var(--color-white-10);
+    border-radius: 4px;
+    overflow: hidden;
+    transition: border-color 0.3s ease;
+}
+.faq-item.active {
+    border-color: var(--color-red);
+}
+.faq-trigger {
+    width: 100%;
+    padding: 24px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-display);
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    color: var(--color-white);
+    text-align: left;
+    transition: color 0.3s ease;
+}
+.faq-trigger:hover {
+    color: var(--color-cream);
+}
+.faq-icon {
+    font-size: 14px;
+    color: var(--color-red);
+    transition: transform 0.3s ease;
+}
+.faq-item.active .faq-icon {
+    transform: rotate(45deg);
+}
+.faq-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s var(--ease-out-expo), padding 0.4s ease;
+    padding: 0 28px;
+}
+.faq-item.active .faq-content {
+    max-height: 250px;
+    padding: 0 28px 24px 28px;
+}
+.faq-content p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--color-white-70);
+    font-weight: 400;
+}
+
+/* ==========================================================================
+   VIDEO PLACEHOLDER SHOWCASE
+   ========================================================================== */
+.video-placeholder-section {
+    padding: 40px var(--pad-x);
+}
+.video-placeholder-container {
+    position: relative;
+    width: 100%;
+    height: 540px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #000;
+    border: 1px solid var(--color-white-10);
+}
+.video-showcase-element {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+}
+.video-placeholder-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.85) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    text-align: center;
+    padding: 30px;
+}
+.video-eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.4em;
+    color: var(--color-cream);
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+.video-title {
+    font-family: var(--font-display);
+    font-size: 48px;
+    font-weight: 900;
+    letter-spacing: 0.15em;
+    color: #fff;
+    margin-bottom: 24px;
+}
+.video-play-btn {
+    width: 74px;
+    height: 74px;
+    border-radius: 50%;
+    background: var(--color-red);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    box-shadow: 0 0 30px rgba(190, 8, 21, 0.6);
+    transition: transform 0.3s var(--ease-out-expo), background 0.3s ease;
+}
+.video-play-btn:hover {
+    transform: scale(1.15);
+    background: var(--color-white);
+    color: var(--color-red);
+}
+
+/* ==========================================================================
+   RUKUS EXPERIENCE / TRUST CARDS
+   ========================================================================== */
+.trust-experience-section {
+    background: var(--color-surface);
+}
+.trust-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-top: 48px;
+}
+.trust-card {
+    background: var(--color-bg);
+    border: 1px solid var(--color-white-10);
+    padding: 36px 28px;
+    border-radius: 4px;
+    transition: transform 0.3s var(--ease-out-expo), border-color 0.3s ease;
+}
+.trust-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--color-red);
+}
+.trust-card-icon {
+    font-size: 28px;
+    color: var(--color-red);
+    margin-bottom: 20px;
+}
+.trust-card-title {
+    font-family: var(--font-display);
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    color: var(--color-white);
+    margin-bottom: 10px;
+}
+.trust-card-desc {
+    font-size: 13px;
+    color: var(--color-white-50);
+    line-height: 1.7;
+    font-weight: 400;
+}
+
+/* ==========================================================================
+   VERIN-STYLE PREMIUM FOOTER
+   ========================================================================== */
+.verin-footer {
+    background: #050505;
+    border-top: 1px solid var(--color-white-10);
+    padding: 80px var(--pad-x) 40px;
+}
+.verin-footer-inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+}
+.verin-footer-main {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 60px;
+    margin-bottom: 60px;
+}
+.verin-footer-logo {
+    height: 38px;
+    width: auto;
+    margin-bottom: 20px;
+}
+.verin-footer-tagline-text {
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--color-white-50);
+    margin-bottom: 24px;
+    font-weight: 400;
+}
+.verin-footer-socials {
+    display: flex;
+    gap: 16px;
+}
+.verin-footer-socials a {
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    background: var(--color-surface-2);
+    border: 1px solid var(--color-white-10);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--color-white-70);
+    font-size: 14px;
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+.verin-footer-socials a:hover {
+    background: var(--color-red);
+    color: #fff;
+    border-color: var(--color-red);
+}
+.verin-footer-nav-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+.verin-footer-heading {
+    font-family: var(--font-display);
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 0.18em;
+    color: var(--color-white);
+    display: block;
+    margin-bottom: 20px;
+}
+.verin-footer-col ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.verin-footer-col a {
+    font-size: 13px;
+    color: var(--color-white-50);
+    transition: color 0.25s ease;
+    font-weight: 500;
+}
+.verin-footer-col a:hover {
+    color: var(--color-red);
+}
+.verin-newsletter-desc {
+    font-size: 12px;
+    color: var(--color-white-40);
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
+.verin-newsletter-form {
+    display: flex;
+    gap: 8px;
+}
+.verin-newsletter-input {
+    flex: 1;
+    background: var(--color-surface-2);
+    border: 1px solid var(--color-white-10);
+    color: #fff;
+    padding: 10px 14px;
+    font-size: 12px;
+    border-radius: 2px;
+    outline: none;
+}
+.verin-newsletter-btn {
+    background: var(--color-red);
+    color: #fff;
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    padding: 10px 18px;
+    border-radius: 2px;
+    transition: background 0.2s ease;
+}
+.verin-newsletter-btn:hover {
+    background: var(--color-red-dark);
+}
+.verin-footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+    border-top: 1px solid var(--color-white-10);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    color: var(--color-white-40);
+}
+.verin-footer-slogan {
+    color: var(--color-cream);
+    font-weight: 800;
+}
+
+/* ==========================================================================
+   WELCOME OFFER POPUP MODAL
+   ========================================================================== */
+.welcome-offer-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(10px);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+.welcome-offer-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+.welcome-offer-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-white-10);
+    border-radius: 6px;
+    max-width: 820px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.8);
+    transform: scale(0.92);
+    transition: transform 0.4s var(--ease-out-expo);
+}
+.welcome-offer-overlay.active .welcome-offer-card {
+    transform: scale(1);
+}
+.welcome-offer-close {
+    position: absolute;
+    top: 16px; right: 16px;
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    z-index: 10;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+.welcome-offer-close:hover {
+    background: var(--color-red);
+    transform: rotate(90deg);
+}
+.welcome-offer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+}
+.welcome-offer-img-col {
+    position: relative;
+    background: #000;
+}
+.welcome-offer-img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+}
+.welcome-offer-img-badge {
+    position: absolute;
+    top: 16px; left: 16px;
+    background: var(--color-red);
+    color: #fff;
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 0.15em;
+    padding: 4px 10px;
+    border-radius: 2px;
+}
+.welcome-offer-content-col {
+    padding: 48px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.welcome-offer-eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    color: var(--color-cream);
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+.welcome-offer-title {
+    font-family: var(--font-display);
+    font-size: 26px;
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.3;
+    margin-bottom: 14px;
+}
+.welcome-offer-title span {
+    color: var(--color-red);
+}
+.welcome-offer-desc {
+    font-size: 13px;
+    color: var(--color-white-70);
+    line-height: 1.6;
+    margin-bottom: 24px;
+    font-weight: 400;
+}
+.welcome-offer-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.welcome-offer-input {
+    background: var(--color-surface-2);
+    border: 1px solid var(--color-white-20);
+    color: #fff;
+    padding: 14px 16px;
+    font-size: 13px;
+    border-radius: 3px;
+    outline: none;
+}
+.welcome-offer-btn {
+    background: var(--color-red);
+    color: #fff;
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    padding: 14px;
+    border-radius: 3px;
+    transition: background 0.2s ease;
+}
+.welcome-offer-btn:hover {
+    background: var(--color-red-dark);
+}
+
+@media (max-width: 1024px) {
+    .intention-grid { grid-template-columns: repeat(2, 1fr); }
+    .verin-footer-main { grid-template-columns: 1fr; gap: 40px; }
+    .verin-footer-nav-grid { grid-template-columns: repeat(2, 1fr); }
+    .trust-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+    .intention-grid { grid-template-columns: 1fr; }
+    .verin-footer-nav-grid { grid-template-columns: 1fr; }
+    .verin-footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
+    .welcome-offer-grid { grid-template-columns: 1fr; }
+    .welcome-offer-img-col { display: none; }
+    .video-placeholder-container { height: 350px; }
+    .video-title { font-size: 28px; }
+    .trust-grid { grid-template-columns: 1fr; }
+}

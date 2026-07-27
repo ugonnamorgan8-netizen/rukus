@@ -121,7 +121,7 @@
          FIXED HERO SECTION (VERIN CURTAIN STYLE)
     ════════════════════════════════════════════════════ -->
     <section class="hero-section hero-fixed" id="hero">
-        <video autoplay muted loop playsinline preload="auto" poster="images/products/product-5.png" class="hero-video">
+        <video autoplay muted loop playsinline preload="metadata" poster="images/products/combat product25.jpg" class="hero-video" id="hero-video">
             <source src="videos/animo-focus-slider-2160p.mp4" type="video/mp4">
             <source src="videos/animo-cover-flow-2160p (1).mp4" type="video/mp4">
         </video>
@@ -325,6 +325,75 @@
             </div>
         </section>
 
+        <!-- ═══════════════════════════════════════════════
+             CARRIED WITH INTENTION (VERIN ANIMATED CAROUSEL)
+        ════════════════════════════════════════════════════ -->
+        <section class="section intention-section" id="carried-with-intention">
+            <div class="section-header reveal-up">
+                <span class="section-eyebrow">ESSENTIAL ACCESSORIES</span>
+                <h2 class="section-title">CARRIED WITH INTENTION</h2>
+                <p class="section-subtext">Crafted for everyday utility and quiet strength. Heavy fabrics, precision hardware.</p>
+            </div>
+
+            <div class="intention-grid">
+                <div class="intention-card reveal-up" style="--delay: 0s">
+                    <div class="intention-img-wrap">
+                        <img src="images/products/intention/eloe-tote.png" alt="RUKUS Tactical Tote" class="intention-img" onerror="this.src='images/products/cap product12.jpg'">
+                        <span class="intention-badge">NEW ACCESSORY</span>
+                        <button class="intention-quick-add" onclick="addToCart(101, 'RUKUS Tactical Tote', 85000, 'images/products/intention/eloe-tote.png', 'ONE SIZE')">
+                            QUICK ADD +
+                        </button>
+                    </div>
+                    <div class="intention-info">
+                        <h3 class="intention-name">RUKUS TACTICAL TOTE</h3>
+                        <span class="intention-price">₦85,000</span>
+                    </div>
+                </div>
+
+                <div class="intention-card reveal-up" style="--delay: 0.1s">
+                    <div class="intention-img-wrap">
+                        <img src="images/products/product-1.png" alt="RUKUS Heavy Carry Bag" class="intention-img">
+                        <span class="intention-badge">LIMITED</span>
+                        <button class="intention-quick-add" onclick="addToCart(102, 'RUKUS Heavy Carry Bag', 120000, 'images/products/product-1.png', 'ONE SIZE')">
+                            QUICK ADD +
+                        </button>
+                    </div>
+                    <div class="intention-info">
+                        <h3 class="intention-name">RUKUS HEAVY CARRY BAG</h3>
+                        <span class="intention-price">₦120,000</span>
+                    </div>
+                </div>
+
+                <div class="intention-card reveal-up" style="--delay: 0.2s">
+                    <div class="intention-img-wrap">
+                        <img src="images/products/product-10.png" alt="RUKUS Utility Pack" class="intention-img">
+                        <span class="intention-badge">HOT DROP</span>
+                        <button class="intention-quick-add" onclick="addToCart(103, 'RUKUS Utility Pack', 65000, 'images/products/product-10.png', 'ONE SIZE')">
+                            QUICK ADD +
+                        </button>
+                    </div>
+                    <div class="intention-info">
+                        <h3 class="intention-name">RUKUS UTILITY PACK</h3>
+                        <span class="intention-price">₦65,000</span>
+                    </div>
+                </div>
+
+                <div class="intention-card reveal-up" style="--delay: 0.3s">
+                    <div class="intention-img-wrap">
+                        <img src="images/products/product-18.png" alt="RUKUS Carry Harness" class="intention-img">
+                        <span class="intention-badge">FEATURED</span>
+                        <button class="intention-quick-add" onclick="addToCart(104, 'RUKUS Carry Harness', 95000, 'images/products/product-18.png', 'ONE SIZE')">
+                            QUICK ADD +
+                        </button>
+                    </div>
+                    <div class="intention-info">
+                        <h3 class="intention-name">RUKUS CARRY HARNESS</h3>
+                        <span class="intention-price">₦95,000</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- NEWS / JOURNAL PREVIEW -->
         <section class="section news-section" id="news">
             <div class="section-header reveal-up">
@@ -369,78 +438,233 @@
             </div>
         </section>
 
-        <!-- TRUST BAR -->
-        <div class="trust-bar reveal-up">
-            <div class="trust-item">
-                <i class="fa-solid fa-truck-fast"></i>
-                <h4>Free Shipping Over ₦50k</h4>
-                <p>On all orders nationwide</p>
+        <!-- ═══════════════════════════════════════════════
+             FAQ SECTION (JUST BELOW JOURNALS)
+        ════════════════════════════════════════════════════ -->
+        <section class="section faq-section" id="faq">
+            <div class="section-header reveal-up">
+                <span class="section-eyebrow">HELP & SUPPORT</span>
+                <h2 class="section-title">FREQUENTLY ASKED QUESTIONS</h2>
             </div>
-            <div class="trust-item">
-                <i class="fa-solid fa-box-open"></i>
-                <h4>Limited Drops Only</h4>
-                <p>No restocks, ever</p>
-            </div>
-            <div class="trust-item">
-                <i class="fa-solid fa-shield-halved"></i>
-                <h4>Secure Checkout</h4>
-                <p>100% encrypted payment</p>
-            </div>
-            <div class="trust-item">
-                <i class="fa-solid fa-fire-flame-curved"></i>
-                <h4>Real Streetwear</h4>
-                <p>No compromises, pure fit</p>
-            </div>
-        </div>
-
-        <!-- FOOTER -->
-        <footer class="footer">
-            <div class="footer-top">
-                <div class="footer-brand">
-                    <img src="images/rukus-logo.png" alt="RUKUS" class="footer-logo">
-                    <p class="footer-brand-text">Streetwear for the misfits. Built heavy. Worn loud.</p>
-                    <div class="footer-socials">
-                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
-                        <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            
+            <div class="faq-accordion reveal-up">
+                <div class="faq-item">
+                    <button class="faq-trigger">
+                        <span>Do you offer nationwide and international shipping?</span>
+                        <i class="fa-solid fa-plus faq-icon"></i>
+                    </button>
+                    <div class="faq-content">
+                        <p>Yes, RUKUS ships across Nigeria via express courier and worldwide to major destinations. Shipping rates and delivery windows are dynamically computed at checkout.</p>
                     </div>
                 </div>
-                <div class="footer-links-group">
-                    <h5>SHOP</h5>
-                    <ul>
-                        <li><a href="collections.html">New Drops</a></li>
-                        <li><a href="collections.html">Hoodies</a></li>
-                        <li><a href="collections.html">Tees</a></li>
-                        <li><a href="collections.html">Headwear</a></li>
-                        <li><a href="collections.html">Footwear</a></li>
-                    </ul>
+
+                <div class="faq-item">
+                    <button class="faq-trigger">
+                        <span>How can I track my drop order?</span>
+                        <i class="fa-solid fa-plus faq-icon"></i>
+                    </button>
+                    <div class="faq-content">
+                        <p>Once your order is processed and dispatched from our Lagos studio, an instant SMS & email tracking notification will be dispatched to your inbox.</p>
+                    </div>
                 </div>
-                <div class="footer-links-group">
-                    <h5>INFO</h5>
-                    <ul>
-                        <li><a href="about.html">About RUKUS</a></li>
-                        <li><a href="news.html">Journal</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
+
+                <div class="faq-item">
+                    <button class="faq-trigger">
+                        <span>Will limited items restock after sold out?</span>
+                        <i class="fa-solid fa-plus faq-icon"></i>
+                    </button>
+                    <div class="faq-content">
+                        <p>No. RUKUS operates on strict limited drop series. Once a drop or collection is marked SOLD OUT, it is archived permanently. No restocks, ever.</p>
+                    </div>
                 </div>
-                <div class="footer-links-group">
-                    <h5>SUPPORT</h5>
-                    <ul>
-                        <li><a href="contact.html">Shipping Policy</a></li>
-                        <li><a href="contact.html">Returns</a></li>
-                        <li><a href="contact.html">Size Guide</a></li>
-                        <li><a href="contact.html">FAQ</a></li>
-                    </ul>
+
+                <div class="faq-item">
+                    <button class="faq-trigger">
+                        <span>What payment options are available?</span>
+                        <i class="fa-solid fa-plus faq-icon"></i>
+                    </button>
+                    <div class="faq-content">
+                        <p>We accept all Debit/Credit Cards, Direct Bank Transfers, Paystack, Flutterwave, Apple Pay, and international card processing.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-trigger">
+                        <span>How should I wash and care for RUKUS heavyweight garments?</span>
+                        <i class="fa-solid fa-plus faq-icon"></i>
+                    </button>
+                    <div class="faq-content">
+                        <p>Our heavy cotton tees and French terry hoodies are pre-shrunk. We recommend cold machine wash inside out and flat air-drying to maintain rich embroidery and structural fit.</p>
+                    </div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <span>© 2026 RUKUS. All rights reserved.</span>
-                <span class="footer-tagline">DISCIPLINE MADE ME.</span>
-                <span>Est. 2024 — DISCIPLINE MADE ME</span>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════
+             VIDEO SHOWCASE PLACEHOLDER (JUST BEFORE EXPERIENCE)
+        ════════════════════════════════════════════════════ -->
+        <section class="section video-placeholder-section reveal-up">
+            <div class="video-placeholder-container">
+                <div class="video-placeholder-overlay">
+                    <span class="video-eyebrow">EDITORIAL FILM 2026</span>
+                    <h2 class="video-title">DISCIPLINE IN MOTION</h2>
+                    <button class="video-play-btn" aria-label="Play Video">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+                </div>
+                <!-- Video Element Placeholder for future video upload -->
+                <video class="video-showcase-element" loop muted playsinline poster="images/products/product-5.png">
+                    <source src="videos/animo-cover-flow-2160p (1).mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════
+             RUKUS EXPERIENCE / TRUST CARDS (ANIMATED)
+        ════════════════════════════════════════════════════ -->
+        <section class="section trust-experience-section reveal-up">
+            <div class="section-header center">
+                <span class="section-eyebrow">THE RUKUS PROMISE</span>
+                <h2 class="section-title">THE RUKUS EXPERIENCE</h2>
+            </div>
+
+            <div class="trust-grid">
+                <div class="trust-card reveal-up" style="--delay: 0s">
+                    <div class="trust-card-icon">
+                        <i class="fa-solid fa-truck-fast"></i>
+                    </div>
+                    <h4 class="trust-card-title">Free Express Shipping</h4>
+                    <p class="trust-card-desc">Complimentary shipping nationwide on orders over ₦50,000 with real-time live tracking updates.</p>
+                </div>
+
+                <div class="trust-card reveal-up" style="--delay: 0.1s">
+                    <div class="trust-card-icon">
+                        <i class="fa-solid fa-fire-flame-curved"></i>
+                    </div>
+                    <h4 class="trust-card-title">Strict Limited Drops</h4>
+                    <p class="trust-card-desc">Every piece is produced in numbered small batches. Never restocked once sold out.</p>
+                </div>
+
+                <div class="trust-card reveal-up" style="--delay: 0.2s">
+                    <div class="trust-card-icon">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h4 class="trust-card-title">100% Encrypted Checkout</h4>
+                    <p class="trust-card-desc">Bank-grade TLS 256-bit encryption for seamless and bulletproof payment transactions.</p>
+                </div>
+
+                <div class="trust-card reveal-up" style="--delay: 0.3s">
+                    <div class="trust-card-icon">
+                        <i class="fa-solid fa-crown"></i>
+                    </div>
+                    <h4 class="trust-card-title">Luxury 380GSM Fabric</h4>
+                    <p class="trust-card-desc">Hand-picked custom milled heavy cottons designed to outlast trends and hold true shape.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════════
+             VERIN-STYLE PREMIUM FOOTER
+        ════════════════════════════════════════════════════ -->
+        <footer class="verin-footer reveal-up">
+            <div class="verin-footer-inner">
+                <div class="verin-footer-main">
+                    <div class="verin-footer-brand-col">
+                        <a href="index.html" class="verin-footer-logo-link">
+                            <img src="images/RUKUS1.png" alt="RUKUS Streetwear" class="verin-footer-logo">
+                        </a>
+                        <p class="verin-footer-tagline-text">
+                            Luxury streetwear crafted with intention and quiet strength. Heavyweight fabrics built to move through seasons with permanence.
+                        </p>
+                        <div class="verin-footer-socials">
+                            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="verin-footer-nav-grid">
+                        <div class="verin-footer-col">
+                            <span class="verin-footer-heading">NAVIGATION</span>
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="collections.html">Collections</a></li>
+                                <li><a href="about.html">About RUKUS</a></li>
+                                <li><a href="news.html">News & Journal</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="verin-footer-col">
+                            <span class="verin-footer-heading">COLLECTIONS</span>
+                            <ul>
+                                <li><a href="collections.html?category=hoodies">Hoodies</a></li>
+                                <li><a href="collections.html?category=tees">Graphic Tees</a></li>
+                                <li><a href="collections.html?category=headwear">Headwear & Beanies</a></li>
+                                <li><a href="collections.html?category=footwear">Footwear & Slides</a></li>
+                                <li><a href="#carried-with-intention">Tactical Accessories</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="verin-footer-col">
+                            <span class="verin-footer-heading">SUPPORT</span>
+                            <ul>
+                                <li><a href="#faq">FAQ</a></li>
+                                <li><a href="contact.html">Shipping Policy</a></li>
+                                <li><a href="contact.html">Returns & Exchanges</a></li>
+                                <li><a href="contact.html">Size Guide</a></li>
+                                <li><a href="contact.html">Terms of Service</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="verin-footer-col verin-footer-newsletter-col">
+                            <span class="verin-footer-heading">GET 15% OFF YOUR FIRST DROP</span>
+                            <p class="verin-newsletter-desc">Subscribe to unlock early drop access and exclusive VIP discount codes.</p>
+                            <form class="verin-newsletter-form" onsubmit="event.preventDefault(); showToast('SUBSCRIBED', 'Welcome to RUKUS VIP access.', 'fa-solid fa-envelope');">
+                                <input type="email" placeholder="email@gmail.com" required class="verin-newsletter-input">
+                                <button type="submit" class="verin-newsletter-btn">JOIN</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="verin-footer-bottom">
+                    <span>© 2026 RUKUS® STREETWEAR. ALL RIGHTS RESERVED.</span>
+                    <span class="verin-footer-slogan">DISCIPLINE MADE ME.</span>
+                    <span>DESIGNED WITH INTENTION.</span>
+                </div>
             </div>
         </footer>
 
     </div><!-- END PAGE OVERSCROLL -->
+
+    <!-- ═══════════════════════════════════════════════
+         WELCOME OFFER POPUP MODAL (VERIN POPUP OFFER)
+    ════════════════════════════════════════════════════ -->
+    <div class="welcome-offer-overlay" id="welcome-offer-overlay">
+        <div class="welcome-offer-card">
+            <button class="welcome-offer-close" id="welcome-offer-close" aria-label="Close modal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="welcome-offer-grid">
+                <div class="welcome-offer-img-col">
+                    <img src="images/products/product-5.png" alt="RUKUS Misfit Tee" class="welcome-offer-img">
+                    <span class="welcome-offer-img-badge">LIMITED ITEM</span>
+                </div>
+                <div class="welcome-offer-content-col">
+                    <span class="welcome-offer-eyebrow">WELCOME OFFER</span>
+                    <h2 class="welcome-offer-title">Sign up and get <span>20% OFF</span> your first drop</h2>
+                    <p class="welcome-offer-desc">Be the first to know when limited drops go live and receive 20% discount on your first order.</p>
+                    
+                    <form class="welcome-offer-form" id="welcome-offer-form">
+                        <input type="email" placeholder="Enter your email address..." required class="welcome-offer-input" id="welcome-offer-email">
+                        <button type="submit" class="welcome-offer-btn">CLAIM 20% OFF</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- SIDE CART DRAWER -->
     <div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
@@ -525,18 +749,34 @@
     <script src="js/products-data.js"></script>
     <script src="js/main.js"></script>
     <script>
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                const loader = document.getElementById('loading-screen');
+        /* Hero video eager-play fix: force play as soon as enough data is ready */
+        (function() {
+            const vid = document.getElementById('hero-video');
+            if (!vid) return;
+            function tryPlay() {
+                vid.play().catch(function() {
+                    // Autoplay blocked — silently skip; muted autoplay should always work
+                });
+            }
+            if (vid.readyState >= 3) {
+                tryPlay();
+            } else {
+                vid.addEventListener('canplay', tryPlay, { once: true });
+            }
+        })();
+
+        /* Loading screen fade-out on full page load */
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                var loader = document.getElementById('loading-screen');
                 if (loader) {
                     loader.style.opacity = '0';
                     loader.style.pointerEvents = 'none';
-                    setTimeout(() => loader.style.display = 'none', 500);
+                    setTimeout(function() { loader.style.display = 'none'; }, 600);
                 }
-            }, 2000);
+            }, 1800);
         });
     </script>
-    <script src="js/main.js"></script>
 </body>
 
 </html>
