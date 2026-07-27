@@ -227,12 +227,28 @@ async function fetchAndRenderProducts(category = 'all') {
         initScrollReveal(); // re-observe newly injected elements
 
     } catch (err) {
-        console.warn('[fetchAndRenderProducts] API unavailable:', err.message);
-        grid.innerHTML = `
-            <p style="color:rgba(255,255,255,0.4);font-family:'Poppins',sans-serif;font-size:13px;
-                       grid-column:1/-1;text-align:center;padding:60px 0;">
-                Could not reach server. Run <code>npm start</code> to load products.
-            </p>`;
+        console.warn('[fetchAndRenderProducts] API unavailable, using resilient fallback data:', err.message);
+        
+        let fallbackProducts = window.RUKUS_PRODUCTS || [];
+        if (category !== 'all') {
+            fallbackProducts = fallbackProducts.filter(p => p.category.toLowerCase() === category.toLowerCase());
+        }
+
+        if (fallbackProducts.length > 0) {
+            grid.innerHTML = '';
+            fallbackProducts.forEach(p => grid.appendChild(renderProductCard(p)));
+            initProductHover();
+            initWishlistToggle();
+            initProductModal();
+            initQuickAdd();
+            initScrollReveal();
+        } else {
+            grid.innerHTML = `
+                <p style="color:rgba(255,255,255,0.6);font-family:'Poppins',sans-serif;font-size:14px;
+                           grid-column:1/-1;text-align:center;padding:60px 0;">
+                    No products found in this category.
+                </p>`;
+        }
     }
 }
 
