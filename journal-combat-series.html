@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Behind the Combat Series — RUKUS Journal</title>
+    <meta name="description" content="An inside look at how we sourced 420GSM cotton, custom distressed hardware, and built the Combat Series from scratch in Lagos.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Raleway:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .journal-body {
+            background-color: var(--color-bg);
+            color: var(--color-white);
+        }
+        .journal-article {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 120px var(--pad-x) 100px;
+        }
+        .journal-meta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+            font-family: var(--font-body);
+            font-size: 11px;
+            letter-spacing: 0.2em;
+            color: var(--color-red);
+            text-transform: uppercase;
+        }
+        .journal-title {
+            font-family: var(--font-display);
+            font-weight: 900;
+            font-size: clamp(38px, 6vw, 76px);
+            line-height: 0.95;
+            text-transform: uppercase;
+            margin-bottom: 32px;
+            letter-spacing: -0.02em;
+        }
+        .journal-hero-img {
+            width: 100%;
+            height: 60vh;
+            object-fit: cover;
+            border-radius: var(--radius);
+            margin-bottom: 56px;
+            border: 1px solid var(--color-white-10);
+        }
+        .journal-content {
+            font-family: var(--font-body);
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--color-white-70);
+        }
+        .journal-content p {
+            margin-bottom: 28px;
+        }
+        .journal-content h3 {
+            font-family: var(--font-display);
+            font-weight: 900;
+            font-size: 28px;
+            color: var(--color-white);
+            margin: 48px 0 20px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .journal-pullquote {
+            border-left: 3px solid var(--color-red);
+            padding-left: 32px;
+            margin: 48px 0;
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 1.4;
+            color: var(--color-white);
+            text-transform: uppercase;
+        }
+        .journal-gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin: 56px 0;
+        }
+        .journal-gallery img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: var(--radius);
+            border: 1px solid var(--color-white-10);
+        }
+        .journal-footer {
+            margin-top: 80px;
+            padding-top: 48px;
+            border-top: 1px solid var(--color-white-10);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        @media (max-width: 768px) {
+            .journal-gallery {
+                grid-template-columns: 1fr;
+            }
+            .journal-gallery img {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body class="journal-body">
+
+    <!-- NAVIGATION BAR -->
+    <header class="navbar" id="navbar">
+        <a href="index.html" class="nav-logo">
+            <img src="images/rukus-logo.png" alt="RUKUS Logo">
+        </a>
+
+        <nav class="nav-menu">
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">HOME</a></li>
+                <li><a href="collections.html" class="nav-link">SHOP</a></li>
+                <li><a href="index.html#lookbook" class="nav-link">LOOKBOOK</a></li>
+                <li><a href="about.html" class="nav-link">ABOUT</a></li>
+                <li><a href="news.html" class="nav-link active">NEWS</a></li>
+            </ul>
+        </nav>
+
+        <div class="nav-actions">
+            <button class="nav-action-btn" aria-label="Search" id="search-btn">
+                <i class="fa-solid fa-search"></i>
+            </button>
+            <button class="nav-action-btn cart-btn" aria-label="Cart" id="cart-btn">
+                <div class="cart-icon-container">
+                    <i class="fa-solid fa-shopping-bag"></i>
+                    <span class="cart-badge" id="cart-count">0</span>
+                </div>
+            </button>
+        </div>
+
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <!-- Mobile Nav Drawer -->
+    <div class="mobile-nav" id="mobile-nav">
+        <ul>
+            <li><a href="index.html" class="mobile-nav-link">HOME</a></li>
+            <li><a href="collections.html" class="mobile-nav-link">SHOP</a></li>
+            <li><a href="index.html#lookbook" class="mobile-nav-link">LOOKBOOK</a></li>
+            <li><a href="about.html" class="mobile-nav-link">ABOUT</a></li>
+            <li><a href="news.html" class="mobile-nav-link">NEWS</a></li>
+            <li><a href="contact.html" class="mobile-nav-link">CONTACT</a></li>
+        </ul>
+    </div>
+
+    <!-- MAIN ARTICLE -->
+    <main class="journal-article">
+        <div class="journal-meta">
+            <span>Drop Story</span>
+            <span>•</span>
+            <span>July 2026</span>
+        </div>
+
+        <h1 class="journal-title">Behind the Combat Series: Building Our Heaviest Drop Yet</h1>
+
+        <img src="images/products/combat product21.jpg" alt="Combat Series Details" class="journal-hero-img">
+
+        <div class="journal-content">
+            <p>
+                The philosophy behind RUKUS has always been one of weight and presence. When you step out in our clothing, we want you to feel the physical presence of the garment. For the Combat Series, we pushed that boundary further than ever before. We didn't just want a new drop; we wanted a testament to heavy construction.
+            </p>
+
+            <div class="journal-pullquote">
+                "WE SOURCED LUXURY 420GSM FRENCH TERRY COTTON AND CUSTOM HARDWARE THAT WE DISTRESSED BY HAND. THIS IS STREETWEAR DESIGNED TO SURVIVE."
+            </div>
+
+            <p>
+                Standard hoodies on the market range from 280 to 320GSM. While comfortable, they lack the structural armor-like drape that represents true luxury streetwear. For the Combat Series, we designed a custom weave 420GSM French Terry. It is heavy, structured, and commands respect.
+            </p>
+
+            <h3>LAGOS INSPIRATION & RAW UTILITY</h3>
+            <p>
+                Lagos is a city of raw energy, speed, and continuous motion. The Combat Series draws heavily from the utility and resilience required to navigate these streets. We integrated functional elements: oversized reinforced cargo pockets, double-layered shoulders for longevity, and hand-distressed hems.
+            </p>
+
+            <div class="journal-gallery">
+                <img src="images/products/combat product22.jpg" alt="Combat Detail View 1">
+                <img src="images/products/combat product25.jpg" alt="Combat Detail View 2">
+            </div>
+
+            <h3>LIMITED RUN, NO RESTOCKS</h3>
+            <p>
+                Following our core ethos, the Combat Series has been produced in extremely limited quantities. We believe in the exclusivity of physical objects in a digital world. Once a piece is gone, it is gone forever.
+            </p>
+        </div>
+
+        <div class="journal-footer">
+            <a href="news.html" class="arrow-link"><i class="fa-solid fa-arrow-left"></i> BACK TO JOURNAL</a>
+            <a href="collections.html" class="btn-outline">SHOP NEW DROPS</a>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <img src="images/rukus-logo.png" alt="RUKUS" class="footer-logo">
+                <p class="footer-brand-text">Streetwear for the misfits. Built heavy. Worn loud.</p>
+            </div>
+            <div class="footer-links-group">
+                <h5>SHOP</h5>
+                <ul>
+                    <li><a href="collections.html">New Drops</a></li>
+                    <li><a href="collections.html">Hoodies</a></li>
+                    <li><a href="collections.html">Tees</a></li>
+                </ul>
+            </div>
+            <div class="footer-links-group">
+                <h5>INFO</h5>
+                <ul>
+                    <li><a href="about.html">About RUKUS</a></li>
+                    <li><a href="news.html">Journal</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links-group">
+                <h5>SUPPORT</h5>
+                <ul>
+                    <li><a href="contact.html">Shipping Policy</a></li>
+                    <li><a href="contact.html">Returns</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 RUKUS. All rights reserved.</span>
+            <span class="footer-tagline">DISCIPLINE MADE ME.</span>
+            <span>Est. 2024 — DISCIPLINE MADE ME</span>
+        </div>
+    </footer>
+
+    <!-- OVERLAYS -->
+    <div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-drawer-header">
+            <h3>YOUR CART (<span id="cart-drawer-count">0</span>)</h3>
+            <button class="cart-drawer-close" id="cart-drawer-close"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="cart-drawer-items" id="cart-drawer-items"></div>
+    </div>
+
+    <div class="search-overlay" id="search-overlay">
+        <button class="search-close" id="search-close"><i class="fa-solid fa-xmark"></i></button>
+        <div class="search-container">
+            <form class="search-form" id="search-form">
+                <input type="search" placeholder="SEARCH DROPS..." class="search-input" id="search-input" autocomplete="off">
+            </form>
+        </div>
+    </div>
+
+    <div class="toast-container" id="toast-container"></div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

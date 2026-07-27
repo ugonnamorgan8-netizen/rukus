@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RUKUS — DISCIPLINE MADE ME</title>
+    <meta name="description" content="RUKUS Streetwear. Limited drops, heavy weight fabrics. DISCIPLINE MADE ME.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Raleway:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- UiBall Spinner -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ldrs/dist/auto/newtonsCradle.js"></script>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- LOADING SCREEN -->
+    <div id="loading-screen">
+        <img src="images/rukus-logo.png" alt="RUKUS Background Logo" class="loader-bg-logo">
+        <l-newtons-cradle size="78" speed="1.4" color="#BE0815"></l-newtons-cradle>
+        <span class="loader-wordmark">RUKUS</span>
+    </div>
+
+    <!-- NAVIGATION -->
+    <header class="navbar" id="navbar">
+        <a href="index.html" class="nav-logo">
+            <img src="images/rukus-logo.png" alt="RUKUS Logo">
+        </a>
+
+        <nav class="nav-menu">
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link active">HOME</a></li>
+                <li><a href="collections.html" class="nav-link">SHOP</a></li>
+                <li><a href="index.html#lookbook" class="nav-link">LOOKBOOK</a></li>
+                <li><a href="about.html" class="nav-link">ABOUT</a></li>
+                <li><a href="news.html" class="nav-link">NEWS</a></li>
+            </ul>
+        </nav>
+
+        <div class="nav-actions">
+            <button class="nav-action-btn theme-toggle-btn" aria-label="Toggle Theme">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+            <button class="nav-action-btn" aria-label="Search" id="search-btn">
+                <i class="fa-solid fa-search"></i>
+            </button>
+            <button class="nav-action-btn" aria-label="Account" id="account-btn">
+                <i class="fa-solid fa-user"></i>
+            </button>
+            <button class="nav-action-btn cart-btn" aria-label="Cart" id="cart-btn">
+                <div class="cart-icon-container">
+                    <i class="fa-solid fa-shopping-bag"></i>
+                    <span class="cart-badge" id="cart-count">0</span>
+                </div>
+            </button>
+        </div>
+
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <!-- RED SECONDARY NAVIGATION (SLIDES DOWN ON SCROLL) -->
+    <header class="navbar secondary-navbar" id="secondary-navbar">
+        <a href="index.html" class="nav-logo">
+            <img src="images/rukus-logo.png" alt="RUKUS Logo">
+        </a>
+
+        <nav class="nav-menu">
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link active">HOME</a></li>
+                <li><a href="collections.html" class="nav-link">SHOP</a></li>
+                <li><a href="index.html#lookbook" class="nav-link">LOOKBOOK</a></li>
+                <li><a href="about.html" class="nav-link">ABOUT</a></li>
+                <li><a href="news.html" class="nav-link">NEWS</a></li>
+            </ul>
+        </nav>
+
+        <div class="nav-actions">
+            <button class="nav-action-btn theme-toggle-btn" aria-label="Toggle Theme">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+            <button class="nav-action-btn" aria-label="Search" id="sec-search-btn">
+                <i class="fa-solid fa-search"></i>
+            </button>
+            <button class="nav-action-btn" aria-label="Account" id="sec-account-btn">
+                <i class="fa-solid fa-user"></i>
+            </button>
+            <button class="nav-action-btn cart-btn" aria-label="Cart" id="sec-cart-btn">
+                <div class="cart-icon-container">
+                    <i class="fa-solid fa-shopping-bag"></i>
+                    <span class="cart-badge" id="sec-cart-count">0</span>
+                </div>
+            </button>
+        </div>
+
+        <button class="hamburger" id="sec-hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <!-- Mobile Nav Drawer -->
+    <div class="mobile-nav" id="mobile-nav">
+        <ul>
+            <li><a href="index.html" class="mobile-nav-link">HOME</a></li>
+            <li><a href="collections.html" class="mobile-nav-link">SHOP</a></li>
+            <li><a href="index.html#lookbook" class="mobile-nav-link">LOOKBOOK</a></li>
+            <li><a href="about.html" class="mobile-nav-link">ABOUT</a></li>
+            <li><a href="news.html" class="mobile-nav-link">NEWS</a></li>
+            <li><a href="contact.html" class="mobile-nav-link">CONTACT</a></li>
+        </ul>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════
+         FIXED HERO SECTION (VERIN CURTAIN STYLE)
+    ════════════════════════════════════════════════════ -->
+    <section class="hero-section hero-fixed" id="hero">
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="videos/animo-focus-slider-2160p.mp4" type="video/mp4">
+            <source src="videos/hero-animation.mp4" type="video/mp4">
+        </video>
+        <div class="hero-gradient"></div>
+        <div class="hero-content">
+            <p class="hero-eyebrow" data-reveal>NEW COLLECTION 2026</p>
+            <h1 class="hero-headline" data-reveal>STREETWEAR<br>FOR THE<br>MISFITS.</h1>
+            <a href="collections.html" class="hero-cta-btn" data-reveal>SHOP NOW</a>
+        </div>
+        <div class="hero-scroll-cue">
+            <span>SCROLL</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         PAGE OVERSCROLL (SLIDES UP OVER HERO ON SCROLL)
+    ════════════════════════════════════════════════════ -->
+    <div class="page-overscroll">
+
+        <!-- MARQUEE TICKER -->
+        <div class="ticker-marquee">
+            <div class="ticker-track" id="ticker-track">
+                <span class="ticker-span">
+                    DISCIPLINE MADE ME <span class="ticker-dot"></span> LOUD MINDS <span class="ticker-dot"></span> DIFFERENT MOVES <span class="ticker-dot"></span> BUILT RUKUS <span class="ticker-dot"></span>
+                    DISCIPLINE MADE ME <span class="ticker-dot"></span> LOUD MINDS <span class="ticker-dot"></span> DIFFERENT MOVES <span class="ticker-dot"></span> BUILT RUKUS <span class="ticker-dot"></span>
+                    DISCIPLINE MADE ME <span class="ticker-dot"></span> LOUD MINDS <span class="ticker-dot"></span> DIFFERENT MOVES <span class="ticker-dot"></span> BUILT RUKUS <span class="ticker-dot"></span>
+                </span>
+                <span class="ticker-span" aria-hidden="true">
+                    DISCIPLINE MADE ME <span class="ticker-dot"></span> LOUD MINDS <span class="ticker-dot"></span> DIFFERENT MOVES <span class="ticker-dot"></span> BUILT RUKUS <span class="ticker-dot"></span>
+                    DISCIPLINE MADE ME <span class="ticker-dot"></span> LOUD MINDS <span class="ticker-dot"></span> DIFFERENT MOVES <span class="ticker-dot"></span> BUILT RUKUS <span class="ticker-dot"></span>
+                    DISCIPLINE MADE ME <span class="ticker-dot"></span> LOUD MINDS <span class="ticker-dot"></span> DIFFERENT MOVES <span class="ticker-dot"></span> BUILT RUKUS <span class="ticker-dot"></span>
+                </span>
+            </div>
+        </div>
+
+        <!-- NEW COLLECTION / FEATURED DROPS -->
+        <section class="section new-collection-section" id="drops">
+            <div class="section-header reveal-up">
+                <span class="section-eyebrow">New Drops — 2026</span>
+                <h2 class="section-title">NEW COLLECTION</h2>
+                <p class="section-sub">Limited pieces. No restocks. Ever.</p>
+            </div>
+
+            <div class="filter-chips-row reveal-up" style="--delay: 0.15s">
+                <button class="filter-chip active" data-cat="all">ALL</button>
+                <button class="filter-chip" data-cat="hoodies">HOODIES</button>
+                <button class="filter-chip" data-cat="tees">TEES</button>
+                <button class="filter-chip" data-cat="headwear">HEADWEAR</button>
+                <button class="filter-chip" data-cat="footwear">FOOTWEAR</button>
+            </div>
+
+            <div id="product-grid" class="product-grid reveal-up" style="--delay: 0.25s"></div>
+
+            <div class="section-cta reveal-up" style="--delay: 0.35s">
+                <a href="collections.html" class="btn-outline">VIEW ALL DROPS <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </section>
+
+        <!-- EXPLORE COLLECTIONS SECTION -->
+        <section class="section explore-collection-section" id="explore">
+            <div class="section-header reveal-up">
+                <span class="section-eyebrow">Explore</span>
+                <h2 class="section-title">THE COLLECTIONS</h2>
+                <p class="section-sub">Curated fits designed for every misfit.</p>
+            </div>
+            
+            <div class="explore-grid">
+                <a href="collections.html?gender=men" class="explore-card reveal-up" style="--delay: 0s">
+                    <div class="explore-card-img-wrap">
+                        <img src="images/products/combat product25.jpg" alt="Men's Collection" class="explore-card-img">
+                    </div>
+                    <div class="explore-card-overlay"></div>
+                    <div class="explore-card-content">
+                        <h3 class="explore-card-title">MEN</h3>
+                        <span class="explore-card-link">DISCOVER <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                </a>
+                
+                <a href="collections.html?gender=women" class="explore-card reveal-up" style="--delay: 0.1s">
+                    <div class="explore-card-img-wrap">
+                        <img src="images/products/jacket ellow29.jpg" alt="Women's Collection" class="explore-card-img">
+                    </div>
+                    <div class="explore-card-overlay"></div>
+                    <div class="explore-card-content">
+                        <h3 class="explore-card-title">WOMEN</h3>
+                        <span class="explore-card-link">DISCOVER <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                </a>
+                
+                <a href="collections.html?gender=kiddies" class="explore-card reveal-up" style="--delay: 0.2s">
+                    <div class="explore-card-img-wrap">
+                        <img src="images/products/Kids product11.jpg" alt="Kiddies Collection" class="explore-card-img">
+                    </div>
+                    <div class="explore-card-overlay"></div>
+                    <div class="explore-card-content">
+                        <h3 class="explore-card-title">KIDDIES</h3>
+                        <span class="explore-card-link">DISCOVER <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- FULL-WIDTH BANNER -->
+        <section class="banner-section reveal-up">
+            <div class="banner-image-wrap">
+                <img src="images/products/combat product25.jpg" alt="RUKUS Campaign" class="banner-img parallax-img">
+            </div>
+            <div class="banner-content">
+                <span class="banner-eyebrow">Combat Series</span>
+                <h2 class="banner-title">OUT OF CONTROL.</h2>
+                <p class="banner-desc">Streetwear meant to raise hell. For those who don't fit, don't compromise, and don't apologize.</p>
+                <a href="collections.html" class="btn-white">EXPLORE THE DROP</a>
+            </div>
+        </section>
+
+        <!-- ABOUT STRIP — BRAND MANIFESTO -->
+        <section class="section manifesto-section">
+            <div class="manifesto-grid">
+                <div class="manifesto-left reveal-left">
+                    <span class="section-eyebrow">Who We Are</span>
+                    <h2 class="manifesto-title">THIS IS NOT<br>A BRAND.</h2>
+                    <a href="about.html" class="arrow-link">Our Story <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="manifesto-right reveal-right">
+                    <p class="manifesto-body">
+                        We are not here to sell you a logo and wish you luck. RUKUS was built for the misfits — the ones who move different, think different, and refuse to shrink. Every piece we make is a statement before you say a word.
+                    </p>
+                    <div class="manifesto-stats">
+                        <div class="stat-item">
+                            <span class="stat-num">240+</span>
+                            <span class="stat-label">GSM Fabric Weight</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num">0</span>
+                            <span class="stat-label">Restocks. Ever.</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num">NG</span>
+                            <span class="stat-label">Made in Nigeria</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LOOKBOOK SECTION -->
+        <section class="section lookbook-section" id="lookbook">
+            <div class="section-header reveal-up">
+                <span class="section-eyebrow">Editorial — 2026</span>
+                <h2 class="section-title">LOOKBOOK</h2>
+            </div>
+
+            <div class="lookbook-grid">
+                <div class="lookbook-cell lookbook-cell--large reveal-up" style="--delay: 0s">
+                    <img src="images/products/combat product25.jpg" alt="RUKUS Heavy Combat" class="lookbook-img">
+                    <div class="lookbook-label">
+                        <span>HEAVY COMBAT SERIES</span>
+                    </div>
+                </div>
+                <div class="lookbook-cell reveal-up" style="--delay: 0.1s">
+                    <img src="images/products/jacket product23.jpg" alt="RUKUS Heavy Knit" class="lookbook-img">
+                    <div class="lookbook-label">
+                        <span>HEAVY KNIT JACKET</span>
+                    </div>
+                </div>
+                <div class="lookbook-cell reveal-up" style="--delay: 0.2s">
+                    <img src="images/products/hoodie product15.jpg" alt="Tactical Streetwear" class="lookbook-img">
+                    <div class="lookbook-label">
+                        <span>TACTICAL LAYERING</span>
+                    </div>
+                </div>
+                <div class="lookbook-cell reveal-up" style="--delay: 0.05s">
+                    <img src="images/products/combat product22.jpg" alt="RUKUS Combat Gear" class="lookbook-img">
+                    <div class="lookbook-label">
+                        <span>COMBAT SERIES</span>
+                    </div>
+                </div>
+                <div class="lookbook-cell reveal-up" style="--delay: 0.15s">
+                    <img src="images/products/jacket ellow29.jpg" alt="Statement Jacket" class="lookbook-img">
+                    <div class="lookbook-label">
+                        <span>STATEMENT JACKET</span>
+                    </div>
+                </div>
+                <div class="lookbook-cell reveal-up" style="--delay: 0.25s">
+                    <img src="images/products/shoe product24.jpg" alt="Street Footwear" class="lookbook-img">
+                    <div class="lookbook-label">
+                        <span>STREET FOOTWEAR</span>
+                    </div>
+                </div>
+                <div class="lookbook-cell reveal-up" style="--delay: 0.3s">
+                    <img src="images/products/joggers product27.jpg" alt="RUKUS Tactical Joggers" class="lookbook-img">
+                    <div class="lookbook-label">
+                        <span>TACTICAL JOGGERS</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-cta reveal-up" style="--delay: 0.3s">
+                <a href="collections.html" class="btn-outline">VIEW FULL LOOKBOOK <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </section>
+
+        <!-- NEWS / JOURNAL PREVIEW -->
+        <section class="section news-section" id="news">
+            <div class="section-header reveal-up">
+                <span class="section-eyebrow">Journal</span>
+                <h2 class="section-title">FROM THE STREETS</h2>
+            </div>
+
+            <div class="news-grid">
+                <article class="news-card reveal-up" style="--delay: 0s">
+                    <div class="news-card-img-wrap">
+                        <img src="images/products/combat product21.jpg" alt="Behind The Drop" class="news-card-img">
+                    </div>
+                    <div class="news-card-body">
+                        <span class="news-card-tag">DROP STORY</span>
+                        <h3 class="news-card-title">Behind The Combat Series: How We Built The Heaviest Drop Yet</h3>
+                        <p class="news-card-date">July 2026</p>
+                        <a href="journal-combat-series.html" class="arrow-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="news-card reveal-up" style="--delay: 0.1s">
+                    <div class="news-card-img-wrap">
+                        <img src="images/products/polo product14.jpg" alt="Culture Post" class="news-card-img">
+                    </div>
+                    <div class="news-card-body">
+                        <span class="news-card-tag">CULTURE</span>
+                        <h3 class="news-card-title">The Misfit Manifesto: Why We Refuse To Do Normal Streetwear</h3>
+                        <p class="news-card-date">June 2026</p>
+                        <a href="journal-misfit-manifesto.html" class="arrow-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="news-card reveal-up" style="--delay: 0.2s">
+                    <div class="news-card-img-wrap">
+                        <img src="images/products/shoe product13.jpg" alt="Process Post" class="news-card-img">
+                    </div>
+                    <div class="news-card-body">
+                        <span class="news-card-tag">PROCESS</span>
+                        <h3 class="news-card-title">From Sketch To Street: The RUKUS Design Process Explained</h3>
+                        <p class="news-card-date">May 2026</p>
+                        <a href="journal-design-process.html" class="arrow-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- TRUST BAR -->
+        <div class="trust-bar reveal-up">
+            <div class="trust-item">
+                <i class="fa-solid fa-truck-fast"></i>
+                <h4>Free Shipping Over ₦50k</h4>
+                <p>On all orders nationwide</p>
+            </div>
+            <div class="trust-item">
+                <i class="fa-solid fa-box-open"></i>
+                <h4>Limited Drops Only</h4>
+                <p>No restocks, ever</p>
+            </div>
+            <div class="trust-item">
+                <i class="fa-solid fa-shield-halved"></i>
+                <h4>Secure Checkout</h4>
+                <p>100% encrypted payment</p>
+            </div>
+            <div class="trust-item">
+                <i class="fa-solid fa-fire-flame-curved"></i>
+                <h4>Real Streetwear</h4>
+                <p>No compromises, pure fit</p>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="images/rukus-logo.png" alt="RUKUS" class="footer-logo">
+                    <p class="footer-brand-text">Streetwear for the misfits. Built heavy. Worn loud.</p>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links-group">
+                    <h5>SHOP</h5>
+                    <ul>
+                        <li><a href="collections.html">New Drops</a></li>
+                        <li><a href="collections.html">Hoodies</a></li>
+                        <li><a href="collections.html">Tees</a></li>
+                        <li><a href="collections.html">Headwear</a></li>
+                        <li><a href="collections.html">Footwear</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-group">
+                    <h5>INFO</h5>
+                    <ul>
+                        <li><a href="about.html">About RUKUS</a></li>
+                        <li><a href="news.html">Journal</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-group">
+                    <h5>SUPPORT</h5>
+                    <ul>
+                        <li><a href="contact.html">Shipping Policy</a></li>
+                        <li><a href="contact.html">Returns</a></li>
+                        <li><a href="contact.html">Size Guide</a></li>
+                        <li><a href="contact.html">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 RUKUS. All rights reserved.</span>
+                <span class="footer-tagline">DISCIPLINE MADE ME.</span>
+                <span>Est. 2024 — DISCIPLINE MADE ME</span>
+            </div>
+        </footer>
+
+    </div><!-- END PAGE OVERSCROLL -->
+
+    <!-- SIDE CART DRAWER -->
+    <div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-drawer-header">
+            <h3>YOUR CART (<span id="cart-drawer-count">0</span>)</h3>
+            <button class="cart-drawer-close" id="cart-drawer-close" aria-label="Close Cart">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <div class="cart-drawer-items" id="cart-drawer-items">
+            <div class="cart-empty-message">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <p>Your bag is empty.</p>
+                <a href="collections.html" class="continue-shopping-btn">SHOP NEW DROPS</a>
+            </div>
+        </div>
+        <div class="cart-drawer-footer" id="cart-drawer-footer" style="display:none;">
+            <div class="cart-total-row">
+                <span>SUBTOTAL</span>
+                <span class="cart-total-price" id="cart-total">₦0</span>
+            </div>
+            <p class="cart-shipping-note">Taxes & shipping calculated at checkout</p>
+            <button class="checkout-btn" id="checkout-btn">PROCEED TO CHECKOUT</button>
+        </div>
+    </div>
+
+    <!-- PRODUCT DETAIL MODAL -->
+    <div class="modal-overlay" id="detail-modal">
+        <div class="modal-container">
+            <button class="modal-close" id="modal-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-content-grid">
+                <div class="modal-gallery">
+                    <img src="" alt="" id="modal-product-img">
+                </div>
+                <div class="modal-details">
+                    <span class="modal-badge">LIMITED DROP</span>
+                    <h2 class="modal-product-name" id="modal-product-name">PRODUCT NAME</h2>
+                    <span class="modal-product-price" id="modal-product-price">₦0</span>
+                    <p class="modal-product-desc" id="modal-product-desc">Product description.</p>
+                    <div class="modal-option-section">
+                        <span class="option-label">SELECT SIZE</span>
+                        <div class="modal-size-selector">
+                            <button class="modal-size-btn" data-size="S">S</button>
+                            <button class="modal-size-btn" data-size="M">M</button>
+                            <button class="modal-size-btn" data-size="L">L</button>
+                            <button class="modal-size-btn" data-size="XL">XL</button>
+                        </div>
+                    </div>
+                    <button class="modal-add-to-cart-btn" id="modal-add-btn">ADD TO BAG</button>
+                    <div class="modal-features">
+                        <div class="feature-item"><i class="fa-solid fa-truck-fast"></i><span>Free Express Shipping on orders over ₦50k</span></div>
+                        <div class="feature-item"><i class="fa-solid fa-rotate-left"></i><span>30-Day Hassle-Free Returns</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SEARCH OVERLAY -->
+    <div class="search-overlay" id="search-overlay">
+        <button class="search-close" id="search-close"><i class="fa-solid fa-xmark"></i></button>
+        <div class="search-container">
+            <form class="search-form" id="search-form">
+                <input type="search" placeholder="SEARCH DROPS..." class="search-input" id="search-input" autocomplete="off">
+                <button type="submit" aria-label="Submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+            <div class="search-suggestions">
+                <h4>TRENDING</h4>
+                <ul>
+                    <li><a href="collections.html" class="search-suggest-link">HOODIE</a></li>
+                    <li><a href="collections.html" class="search-suggest-link">TEE</a></li>
+                    <li><a href="collections.html" class="search-suggest-link">CARGO PANTS</a></li>
+                    <li><a href="collections.html" class="search-suggest-link">BEANIE</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast-container" id="toast-container"></div>
+
+    <script>
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const loader = document.getElementById('loading-screen');
+                if (loader) {
+                    loader.style.opacity = '0';
+                    loader.style.pointerEvents = 'none';
+                    setTimeout(() => loader.style.display = 'none', 500);
+                }
+            }, 2000);
+        });
+    </script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

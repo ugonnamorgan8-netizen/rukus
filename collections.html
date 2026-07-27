@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOP COLLECTIONS — RUKUS Streetwear</title>
+    <meta name="description" content="Explore all limited drops, hoodies, tees, headwear, and footwear from RUKUS Streetwear.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Raleway:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="collections-body">
+
+    <!-- NAVIGATION BAR -->
+    <header class="navbar" id="navbar">
+        <a href="index.html" class="nav-logo">
+            <img src="images/rukus-logo.png" alt="RUKUS Logo">
+        </a>
+
+        <nav class="nav-menu">
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">HOME</a></li>
+                <li><a href="collections.html" class="nav-link active">SHOP</a></li>
+                <li><a href="index.html#lookbook" class="nav-link">LOOKBOOK</a></li>
+                <li><a href="about.html" class="nav-link">ABOUT</a></li>
+                <li><a href="news.html" class="nav-link">NEWS</a></li>
+            </ul>
+        </nav>
+
+        <div class="nav-actions">
+            <button class="nav-action-btn theme-toggle-btn" aria-label="Toggle Theme">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+            <button class="nav-action-btn" aria-label="Search" id="search-btn">
+                <i class="fa-solid fa-search"></i>
+            </button>
+            <button class="nav-action-btn cart-btn" aria-label="Cart" id="cart-btn">
+                <div class="cart-icon-container">
+                    <i class="fa-solid fa-shopping-bag"></i>
+                    <span class="cart-badge" id="cart-count">0</span>
+                </div>
+            </button>
+        </div>
+
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <!-- Mobile Nav Drawer -->
+    <div class="mobile-nav" id="mobile-nav">
+        <ul>
+            <li><a href="index.html" class="mobile-nav-link">HOME</a></li>
+            <li><a href="collections.html" class="mobile-nav-link">SHOP</a></li>
+            <li><a href="index.html#lookbook" class="mobile-nav-link">LOOKBOOK</a></li>
+            <li><a href="about.html" class="mobile-nav-link">ABOUT</a></li>
+            <li><a href="news.html" class="mobile-nav-link">NEWS</a></li>
+            <li><a href="contact.html" class="mobile-nav-link">CONTACT</a></li>
+        </ul>
+    </div>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <span class="page-hero-eyebrow">All Drops</span>
+        <h1 class="page-hero-title">COLLECTIONS</h1>
+        <p class="page-hero-sub">Disciplined streetwear built from heavy fabrics. No restocks, ever.</p>
+    </section>
+
+    <!-- COLLECTIONS LAYOUT -->
+    <div class="collections-layout">
+        <!-- Sidebar Filters -->
+        <aside class="filter-sidebar">
+            <h3>FILTERS</h3>
+
+            <div class="filter-group">
+                <h4>CATEGORIES</h4>
+                <label class="filter-option">
+                    <input type="checkbox" name="cat" value="hoodies"> Hoodies
+                </label>
+                <label class="filter-option">
+                    <input type="checkbox" name="cat" value="tees"> Tees
+                </label>
+                <label class="filter-option">
+                    <input type="checkbox" name="cat" value="headwear"> Headwear
+                </label>
+                <label class="filter-option">
+                    <input type="checkbox" name="cat" value="footwear"> Footwear
+                </label>
+            </div>
+
+            <div class="filter-group">
+                <h4>STATUS</h4>
+                <label class="filter-option">
+                    <input type="checkbox" name="status" value="new"> New Drop
+                </label>
+                <label class="filter-option">
+                    <input type="checkbox" name="status" value="limited"> Limited Edition
+                </label>
+            </div>
+        </aside>
+
+        <!-- Main Product Grid -->
+        <main class="collections-main">
+            <div class="collections-main-header">
+                <span class="collections-count">SHOWING ALL PRODUCTS</span>
+                <select class="sort-select" id="sort-select">
+                    <option value="featured">FEATURED</option>
+                    <option value="price-low">PRICE: LOW TO HIGH</option>
+                    <option value="price-high">PRICE: HIGH TO LOW</option>
+                </select>
+            </div>
+
+            <!-- Filter chips -->
+            <div class="filter-chips-row">
+                <button class="filter-chip active" data-cat="all">ALL</button>
+                <button class="filter-chip" data-cat="hoodies">HOODIES</button>
+                <button class="filter-chip" data-cat="tees">TEES</button>
+                <button class="filter-chip" data-cat="headwear">HEADWEAR</button>
+                <button class="filter-chip" data-cat="footwear">FOOTWEAR</button>
+            </div>
+
+            <div id="product-grid" class="product-grid"></div>
+        </main>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <img src="images/rukus-logo.png" alt="RUKUS" class="footer-logo">
+                <p class="footer-brand-text">Streetwear for the misfits. Built heavy. Worn loud.</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-links-group">
+                <h5>SHOP</h5>
+                <ul>
+                    <li><a href="collections.html">New Drops</a></li>
+                    <li><a href="collections.html">Hoodies</a></li>
+                    <li><a href="collections.html">Tees</a></li>
+                    <li><a href="collections.html">Headwear</a></li>
+                    <li><a href="collections.html">Footwear</a></li>
+                </ul>
+            </div>
+            <div class="footer-links-group">
+                <h5>INFO</h5>
+                <ul>
+                    <li><a href="about.html">About RUKUS</a></li>
+                    <li><a href="news.html">Journal</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links-group">
+                <h5>SUPPORT</h5>
+                <ul>
+                    <li><a href="contact.html">Shipping Policy</a></li>
+                    <li><a href="contact.html">Returns</a></li>
+                    <li><a href="contact.html">Size Guide</a></li>
+                    <li><a href="contact.html">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 RUKUS. All rights reserved.</span>
+            <span class="footer-tagline">DISCIPLINE MADE ME.</span>
+            <span>Est. 2024 — DISCIPLINE MADE ME</span>
+        </div>
+    </footer>
+
+    <!-- SIDE CART DRAWER -->
+    <div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-drawer-header">
+            <h3>YOUR CART (<span id="cart-drawer-count">0</span>)</h3>
+            <button class="cart-drawer-close" id="cart-drawer-close" aria-label="Close Cart">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <div class="cart-drawer-items" id="cart-drawer-items"></div>
+        <div class="cart-drawer-footer" id="cart-drawer-footer" style="display:none;">
+            <div class="cart-total-row">
+                <span>SUBTOTAL</span>
+                <span class="cart-total-price" id="cart-total">₦0</span>
+            </div>
+            <p class="cart-shipping-note">Taxes & shipping calculated at checkout</p>
+            <button class="checkout-btn" id="checkout-btn">PROCEED TO CHECKOUT</button>
+        </div>
+    </div>
+
+    <!-- PRODUCT DETAIL MODAL -->
+    <div class="modal-overlay" id="detail-modal">
+        <div class="modal-container">
+            <button class="modal-close" id="modal-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-content-grid">
+                <div class="modal-gallery">
+                    <img src="" alt="" id="modal-product-img">
+                </div>
+                <div class="modal-details">
+                    <span class="modal-badge">LIMITED DROP</span>
+                    <h2 class="modal-product-name" id="modal-product-name">PRODUCT NAME</h2>
+                    <span class="modal-product-price" id="modal-product-price">₦0</span>
+                    <p class="modal-product-desc" id="modal-product-desc">Product description.</p>
+                    <div class="modal-option-section">
+                        <span class="option-label">SELECT SIZE</span>
+                        <div class="modal-size-selector">
+                            <button class="modal-size-btn" data-size="S">S</button>
+                            <button class="modal-size-btn" data-size="M">M</button>
+                            <button class="modal-size-btn" data-size="L">L</button>
+                            <button class="modal-size-btn" data-size="XL">XL</button>
+                        </div>
+                    </div>
+                    <button class="modal-add-to-cart-btn" id="modal-add-btn">ADD TO BAG</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SEARCH OVERLAY -->
+    <div class="search-overlay" id="search-overlay">
+        <button class="search-close" id="search-close"><i class="fa-solid fa-xmark"></i></button>
+        <div class="search-container">
+            <form class="search-form" id="search-form">
+                <input type="search" placeholder="SEARCH DROPS..." class="search-input" id="search-input" autocomplete="off">
+                <button type="submit" aria-label="Submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <div class="toast-container" id="toast-container"></div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

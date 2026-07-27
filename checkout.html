@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHECKOUT — RUKUS Streetwear</title>
+    <meta name="description" content="Complete your purchase with RUKUS Streetwear. High quality streetwear drops and accessories.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Raleway:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="checkout-body">
+
+    <!-- NAVIGATION -->
+    <header class="navbar" id="navbar">
+        <a href="index.html" class="nav-logo">
+            <img src="images/rukus-logo.png" alt="RUKUS Logo">
+        </a>
+
+        <nav class="nav-menu">
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">HOME</a></li>
+                <li><a href="collections.html" class="nav-link">SHOP</a></li>
+                <li><a href="index.html#lookbook" class="nav-link">LOOKBOOK</a></li>
+                <li><a href="about.html" class="nav-link">ABOUT</a></li>
+                <li><a href="news.html" class="nav-link">NEWS</a></li>
+            </ul>
+        </nav>
+
+        <div class="nav-actions">
+            <button class="nav-action-btn theme-toggle-btn" aria-label="Toggle Theme">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+            <button class="nav-action-btn" aria-label="Search" id="search-btn">
+                <i class="fa-solid fa-search"></i>
+            </button>
+            <button class="nav-action-btn cart-btn" aria-label="Cart" id="cart-btn">
+                <div class="cart-icon-container">
+                    <i class="fa-solid fa-shopping-bag"></i>
+                    <span class="cart-badge" id="cart-count">0</span>
+                </div>
+            </button>
+        </div>
+
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <!-- CHECKOUT CONTAINER -->
+    <main class="checkout-container">
+        <div class="checkout-header">
+            <span class="checkout-tag">SECURE CHECKOUT</span>
+            <h1 class="checkout-title">DISCIPLINE MADE ME</h1>
+        </div>
+
+        <div class="checkout-grid">
+            <!-- LEFT FORM -->
+            <form id="checkout-form" class="checkout-form">
+                <!-- STEP 1: CONTACT INFORMATION -->
+                <section class="checkout-section">
+                    <h2 class="section-heading"><span>01</span> CONTACT INFORMATION</h2>
+                    <div class="form-group">
+                        <label for="email">EMAIL ADDRESS *</label>
+                        <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                    </div>
+                </section>
+
+                <!-- STEP 2: SHIPPING ADDRESS -->
+                <section class="checkout-section">
+                    <h2 class="section-heading"><span>02</span> SHIPPING ADDRESS</h2>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="first_name">FIRST NAME *</label>
+                            <input type="text" id="first_name" name="first_name" placeholder="John" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="last_name">LAST NAME *</label>
+                            <input type="text" id="last_name" name="last_name" placeholder="Doe" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">STREET ADDRESS *</label>
+                        <input type="text" id="address" name="address" placeholder="12 Allen Avenue, Ikeja" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="city">CITY / STATE *</label>
+                            <input type="text" id="city" name="city" placeholder="Lagos" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="postal_code">POSTAL CODE</label>
+                            <input type="text" id="postal_code" name="postal_code" placeholder="100001">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="country">COUNTRY *</label>
+                            <select id="country" name="country" required>
+                                <option value="Nigeria">Nigeria</option>
+                                <option value="Ghana">Ghana</option>
+                                <option value="United Kingdom">United Kingdom</option>
+                                <option value="United States">United States</option>
+                                <option value="Canada">Canada</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">PHONE NUMBER *</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+234 801 234 5678" required>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- STEP 3: PAYMENT METHOD -->
+                <section class="checkout-section">
+                    <h2 class="section-heading"><span>03</span> PAYMENT METHOD</h2>
+                    <div class="payment-options">
+                        <label class="payment-card active">
+                            <input type="radio" name="payment_method" value="card" checked>
+                            <div class="payment-info">
+                                <span class="payment-title"><i class="fa-regular fa-credit-card"></i> DEBIT / CREDIT CARD</span>
+                                <span class="payment-sub">Paystack / Flutterwave instant checkout</span>
+                            </div>
+                        </label>
+                        <label class="payment-card">
+                            <input type="radio" name="payment_method" value="bank_transfer">
+                            <div class="payment-info">
+                                <span class="payment-title"><i class="fa-solid fa-building-columns"></i> DIRECT BANK TRANSFER</span>
+                                <span class="payment-sub">Transfer directly to RUKUS corporate account</span>
+                            </div>
+                        </label>
+                    </div>
+                </section>
+
+                <button type="submit" id="place-order-btn" class="place-order-btn">
+                    <span>PLACE ORDER</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </form>
+
+            <!-- RIGHT SUMMARY -->
+            <aside class="checkout-summary">
+                <h2 class="summary-title">ORDER SUMMARY</h2>
+                <div id="checkout-items-list" class="checkout-items-list">
+                    <!-- Dynamic cart items rendered here -->
+                </div>
+
+                <div class="summary-totals">
+                    <div class="summary-row">
+                        <span>SUBTOTAL</span>
+                        <span id="summary-subtotal">₦0</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>SHIPPING</span>
+                        <span id="summary-shipping">₦2,500</span>
+                    </div>
+                    <div class="summary-row summary-total">
+                        <span>TOTAL</span>
+                        <span id="summary-total">₦2,500</span>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- SUCCESS MODAL -->
+    <div id="order-success-modal" class="modal-overlay" style="display:none;">
+        <div class="modal-content text-center">
+            <i class="fa-solid fa-circle-check success-icon"></i>
+            <h2 class="modal-title">ORDER CONFIRMED</h2>
+            <p class="modal-text">Thank you for your order! Your order reference is <strong id="confirmed-order-id">#RKS-000000</strong>.</p>
+            <p class="modal-subtext">We have sent a receipt to your email address.</p>
+            <a href="index.html" class="btn btn-primary margin-top">RETURN TO HOME</a>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/checkout.js"></script>
+</body>
+</html>

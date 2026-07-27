@@ -1,0 +1,21 @@
+{
+  "name": "rukus",
+  "version": "1.0.0",
+  "description": "RUKUS Streetwear — brand website and backend",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "node --watch server/server.js",
+    "seed": "node server/seed.js"
+  },
+  "keywords": ["streetwear", "rukus", "ecommerce"],
+  "author": "RUKUS",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "pg": "^8.22.0"
+  }
+}

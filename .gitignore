@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# Environment — NEVER commit secrets
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Build output
+dist/
+build/
+
+# Editor directories
+.vscode/
+.idea/
+
+# Optional: lock file (keep if you want reproducible installs)
+# package-lock.json
