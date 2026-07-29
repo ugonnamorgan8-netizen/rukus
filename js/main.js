@@ -13,7 +13,11 @@ document.addEventListener('DOMContentLoaded', () => {
     initCart();
     initSearch();
     initParallax();
-    fetchAndRenderProducts();
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const initialCategory = urlParams.get('category') || urlParams.get('cat') || 'all';
+    fetchAndRenderProducts(initialCategory);
+
     initContactForm();
     initProductDetailPage();
     initFaqAccordion();
@@ -304,19 +308,66 @@ function renderProductCard(product) {
 }
 
 /* ==========================================================================
-   FILTER CHIPS
+   FILTER CHIPS & SIDEBAR FILTERS
    ========================================================================== */
 function initFilterChips() {
     const chips = document.querySelectorAll('.filter-chip');
-    if (!chips.length) return;
+    const categoryCheckboxes = document.querySelectorAll('.filter-group input[name="cat"]');
+    
+    // Read category from URL parameter if present
+    const urlParams = new URLSearchParams(window.location.search);
+    const initialCat = urlParams.get('category') || urlParams.get('cat');
 
+    if (initialCat) {
+        const catClean = initialCat.toLowerCase();
+        chips.forEach(c => {
+            const chipCat = (c.dataset.cat || c.textContent.trim()).toLowerCase();
+            c.classList.toggle('active', chipCat === catClean);
+        });
+        categoryCheckboxes.forEach(cb => {
+            cb.checked = (cb.value.toLowerCase() === catClean);
+        });
+    }
+
+    // Filter chip click handlers
     chips.forEach(chip => {
         chip.addEventListener('click', () => {
             chips.forEach(c => c.classList.remove('active'));
             chip.classList.add('active');
 
             const cat = chip.dataset.cat || chip.textContent.trim().toLowerCase();
+            
+            // Sync checkboxes if on collections page
+            categoryCheckboxes.forEach(cb => {
+                cb.checked = (cat !== 'all' && cb.value.toLowerCase() === cat.toLowerCase());
+            });
+
             fetchAndRenderProducts(cat === 'all' ? 'all' : cat);
+        });
+    });
+
+    // Sidebar category checkboxes change handlers
+    categoryCheckboxes.forEach(cb => {
+        cb.addEventListener('change', () => {
+            const checkedBoxes = Array.from(categoryCheckboxes).filter(c => c.checked);
+            if (checkedBoxes.length === 1) {
+                const selectedCat = checkedBoxes[0].value.toLowerCase();
+                chips.forEach(c => {
+                    const chipCat = (c.dataset.cat || c.textContent.trim()).toLowerCase();
+                    c.classList.toggle('active', chipCat === selectedCat);
+                });
+                fetchAndRenderProducts(selectedCat);
+            } else if (checkedBoxes.length === 0) {
+                chips.forEach(c => {
+                    const chipCat = (c.dataset.cat || c.textContent.trim()).toLowerCase();
+                    c.classList.toggle('active', chipCat === 'all');
+                });
+                fetchAndRenderProducts('all');
+            } else {
+                // If multiple boxes checked, fetch first selected or all
+                const selectedCat = checkedBoxes[0].value.toLowerCase();
+                fetchAndRenderProducts(selectedCat);
+            }
         });
     });
 }

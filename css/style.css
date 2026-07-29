@@ -55,10 +55,11 @@ body.light-mode .nav-logo img {
     filter: none !important;
 }
 
-/* Ensure text on solid dark components (like hero overlays, dark badges, buttons) remains legible */
+/* Fix text and buttons on solid dark components & dark overlays in Light Mode */
 body.light-mode .hero-headline,
 body.light-mode .hero-eyebrow,
 body.light-mode .hero-scroll-cue,
+body.light-mode .hero-cta-btn,
 body.light-mode .banner-title,
 body.light-mode .banner-eyebrow,
 body.light-mode .banner-desc,
@@ -66,14 +67,119 @@ body.light-mode .product-badge,
 body.light-mode .intention-badge,
 body.light-mode .welcome-offer-title,
 body.light-mode .welcome-offer-btn,
-body.light-mode .btn-white,
+body.light-mode .explore-card-title,
+body.light-mode .explore-card-link,
+body.light-mode .news-card-tag,
+body.light-mode .intention-quick-add {
+    color: #ffffff !important;
+}
+
+/* ── Wishlist/heart button: always white icon on its dark circular bg ── */
+body.light-mode .wishlist-btn {
+    background: rgba(10,10,10,0.75) !important;
+    color: #ffffff !important;
+}
+body.light-mode .wishlist-btn:hover {
+    background: rgba(10,10,10,0.95) !important;
+}
+body.light-mode .wishlist-btn.active i {
+    color: var(--color-red) !important;
+}
+
+/* ── Carried With Intention: product names are on light card backgrounds ── */
+body.light-mode .intention-card .intention-name {
+    color: #111111 !important;
+}
+body.light-mode .intention-card .intention-price {
+    color: var(--color-red) !important;
+}
+body.light-mode .intention-info {
+    background: #F0F0F0 !important;
+}
+
+/* ── Lookbook labels: always white — they sit on a dark gradient overlay ── */
+body.light-mode .lookbook-label {
+    background: linear-gradient(transparent, rgba(5,5,5,0.92)) !important;
+}
+body.light-mode .lookbook-label span {
+    color: #ffffff !important;
+}
+
+/* Outline buttons in light mode: visible black border and text */
 body.light-mode .btn-outline {
+    border-color: #000000 !important;
+    color: #000000 !important;
+    background-color: transparent !important;
+}
+body.light-mode .btn-outline:hover {
+    background-color: #000000 !important;
     color: #ffffff !important;
 }
 
 body.light-mode .btn-white {
-    background-color: #ffffff !important;
-    color: #000000 !important;
+    background-color: #000000 !important;
+    color: #ffffff !important;
+}
+
+/* Product hover overlay in light mode (Keep dark overlay with white text) */
+body.light-mode .quick-add-overlay {
+    background: rgba(17,17,17,0.96) !important;
+}
+body.light-mode .quick-add-title {
+    color: rgba(255,255,255,0.7) !important;
+}
+body.light-mode .quick-size-btn {
+    border-color: rgba(255,255,255,0.3) !important;
+    color: #ffffff !important;
+    background: transparent !important;
+}
+body.light-mode .quick-size-btn:hover {
+    border-color: var(--color-red) !important;
+    color: var(--color-red) !important;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────
+   VERIN FOOTER — always dark background, so we force white text in
+   light mode to prevent the variable-flip from making text invisible.
+   ───────────────────────────────────────────────────────────────────────── */
+body.light-mode .verin-footer {
+    background: #050505 !important;
+    border-top-color: rgba(255,255,255,0.1) !important;
+}
+body.light-mode .verin-footer-tagline-text {
+    color: rgba(255,255,255,0.55) !important;
+}
+body.light-mode .verin-footer-heading {
+    color: #ffffff !important;
+}
+body.light-mode .verin-footer-col a {
+    color: rgba(255,255,255,0.55) !important;
+}
+body.light-mode .verin-footer-col a:hover {
+    color: var(--color-red) !important;
+}
+body.light-mode .verin-newsletter-desc {
+    color: rgba(255,255,255,0.45) !important;
+}
+body.light-mode .verin-newsletter-input {
+    background: #1a1a1a !important;
+    border-color: rgba(255,255,255,0.15) !important;
+    color: #ffffff !important;
+}
+body.light-mode .verin-newsletter-input::placeholder {
+    color: rgba(255,255,255,0.35) !important;
+}
+body.light-mode .verin-footer-bottom {
+    border-top-color: rgba(255,255,255,0.1) !important;
+    color: rgba(255,255,255,0.35) !important;
+}
+body.light-mode .verin-footer-slogan {
+    color: var(--color-cream) !important;
+}
+body.light-mode .verin-footer-socials a {
+    background: #1a1a1a !important;
+    border-color: rgba(255,255,255,0.12) !important;
+    color: rgba(255,255,255,0.6) !important;
 }
 
 /* ==========================================================================
@@ -2014,8 +2120,12 @@ ul { list-style: none; }
     .news-grid { grid-template-columns: 1fr; }
     .philosophy-grid { grid-template-columns: 1fr; }
     .trust-bar { grid-template-columns: 1fr 1fr; }
-    .modal-content-grid { grid-template-columns: 1fr; }
-    .section { padding: 70px var(--pad-x); }
+    .explore-grid { grid-template-columns: 1fr; gap: 20px; margin-top: 32px; }
+    .explore-card { height: 260px; padding: 24px; }
+    .explore-card-title { font-size: 28px !important; color: #ffffff !important; }
+    .explore-card-link { font-size: 11px !important; color: #ffffff !important; opacity: 0.95; }
+    .explore-card-overlay { background: linear-gradient(to top, rgba(10,10,10,0.85) 0%, rgba(10,10,10,0.4) 60%, rgba(10,10,10,0.2) 100%) !important; }
+    .section { padding: 50px var(--pad-x); }
 }
 
 /* ==========================================================================
